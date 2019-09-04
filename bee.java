@@ -46,7 +46,7 @@ public class bee extends Actor
             removeTouching(Cactus.class);
         }
         //Check to see if bee wins
-        if(score >= 15) {
+        if(score >= 15 || score <= -15) {
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
