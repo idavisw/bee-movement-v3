@@ -37,6 +37,7 @@ public class bee extends Actor
             score = plantScore + score;
             removeTouching(Flower.class);
         }
+        //Check if bee hits a cactus
         boolean contactCactus = isTouching(Cactus.class);
         if(contactCactus) {
             Cactus plant = (Cactus) getOneIntersectingObject(Cactus.class);
@@ -44,8 +45,11 @@ public class bee extends Actor
             score = score - plantScore;
             removeTouching(Cactus.class);
         }
-        
-        
+        //Check to see if bee wins
+        if(score >= 12) {
+            BeeWin winscreen = new BeeWin();
+            Greenfoot.setWorld(winscreen);
+        }
         
         
     }    

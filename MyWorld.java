@@ -22,7 +22,7 @@ public class MyWorld extends World
         addObject(bee1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600)); 
         Lemur lemur1 = new Lemur();
         addObject(lemur1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
-        for(int i = 0; i < 2000; i++) {
+        for(int i = 0; i < 10; i++) {
             
             Cactus cactus1 = new PoisonMushroom();
             addObject(cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
