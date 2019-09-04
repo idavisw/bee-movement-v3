@@ -45,10 +45,13 @@ public class Lemur extends Actor
             removeTouching(Cactus.class);
         }
         //Check to see if Lemur wins
-        if(score >= 15 || score <= -15) {
+        if(score >= 15) {
             LemurWin winscreen = new LemurWin();
             Greenfoot.setWorld(winscreen);
         }
-        
+        if(score <= -15) {
+            BeeWin winscreen = new BeeWin();
+            Greenfoot.setWorld(winscreen);
+        }
     }    
 }

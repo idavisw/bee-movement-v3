@@ -50,7 +50,10 @@ public class bee extends Actor
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
-        
+        if(score <= -15) {
+            LemurWin winscreen = new LemurWin();
+            Greenfoot.setWorld(winscreen);
+        }
         
     }    
 }
