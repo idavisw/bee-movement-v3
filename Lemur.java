@@ -22,7 +22,7 @@ public class Lemur extends Actor
         move(5);
         int x = getX();
         int y = getY();
-        if(x > 600 || y < 0 || y > 400) {
+        if(x > 600 || y < 0 || y > 600) {
             x = 0;
             y = Greenfoot.getRandomNumber(400);
             setRotation(0);
