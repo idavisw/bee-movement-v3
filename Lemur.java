@@ -24,11 +24,11 @@ public class Lemur extends Actor
         int y = getY();
         if(x > 600 || y < 0 || y > 600) {
             x = 0;
-            y = Greenfoot.getRandomNumber(400);
+            y = Greenfoot.getRandomNumber(600);
             setRotation(0);
             setLocation(x, y);
         }
-        //Check If We Hit A Flower
+        //Check if it hits a flower class objects
         boolean contactFlower = isTouching(Flower.class);
         if(contactFlower) {
             Flower plant = (Flower) getOneIntersectingObject(Flower.class);
@@ -36,21 +36,23 @@ public class Lemur extends Actor
             score = score - plantScore;
             removeTouching(Flower.class);
         }
+        //Check if it hits cactus class objects
         boolean contactCactus = isTouching(Cactus.class);
         if(contactCactus) {
             Cactus plant = (Cactus) getOneIntersectingObject(Cactus.class);
             int plantScore = plant.getScore();
-            score = plantScore + score;
+            score = score + plantScore;
             removeTouching(Cactus.class);
         }
         //Check to see if Lemur or bee wins
-        if(score >= 22) {
+        if(score >= 15) {
             LemurWin winscreen = new LemurWin();
             Greenfoot.setWorld(winscreen);
         }
-        if(score <= -22) {
+        if(score <= -15) {
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
+        
     }    
 }

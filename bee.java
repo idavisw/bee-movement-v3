@@ -11,12 +11,13 @@ public class bee extends Actor
  
     private int score = 0;
     
+    
+    
     /**
      * Act - do whatever the bee wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
         
         turn(Greenfoot.getRandomNumber(10) - 5);
         move(5);
@@ -30,11 +31,10 @@ public class bee extends Actor
         }
         //Check If We Hit A Flower
         boolean contactFlower = isTouching(Flower.class);
-        //System.out.println(contactFlower);
         if(contactFlower) {
             Flower plant = (Flower) getOneIntersectingObject(Flower.class);
             int plantScore = plant.getScore();
-            score = plantScore + score;
+            score = score + plantScore;
             removeTouching(Flower.class);
         }
         //Check if bee hits a cactus
@@ -46,14 +46,14 @@ public class bee extends Actor
             removeTouching(Cactus.class);
         }
         //Check to see if bee or lemur wins
-        if(score >= 22) {
+        if(score >= 15) {
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
-        if(score <= -22) {
+        if(score <= -15) {
             LemurWin winscreen = new LemurWin();
             Greenfoot.setWorld(winscreen);
         }
-        
+
     }    
 }
