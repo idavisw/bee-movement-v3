@@ -45,12 +45,12 @@ public class bee extends Actor
             score = score - plantScore;
             removeTouching(Cactus.class);
         }
-        //Check to see if bee wins
-        if(score >= 15 || score <= -15) {
+        //Check to see if bee or lemur wins
+        if(score >= 22) {
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
-        if(score <= -15) {
+        if(score <= -22) {
             LemurWin winscreen = new LemurWin();
             Greenfoot.setWorld(winscreen);
         }

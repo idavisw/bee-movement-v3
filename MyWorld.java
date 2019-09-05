@@ -22,20 +22,20 @@ public class MyWorld extends World
         addObject(bee1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600)); 
         Lemur lemur1 = new Lemur();
         addObject(lemur1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
-        for(int i = 0; i < 8; i++) {
+        for(int i = 0; i < 9; i++) {
             
             Cactus cactus1 = new PoisonMushroom();
-            addObject(cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
+            addObject(cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Cactus cactus2 = new Lemon();
-            addObject(cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
+            addObject(cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Cactus cactus3 = new PoisonIvy();
-            addObject(cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
+            addObject(cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Flower flower1 = new Flower1();
-            addObject(flower1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
+            addObject(flower1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Flower flower2 = new Flower2();
-            addObject(flower2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));
+            addObject(flower2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Flower flower3 = new Flower3();
-            addObject(flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(600));          
+            addObject(flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));          
         }
 
         

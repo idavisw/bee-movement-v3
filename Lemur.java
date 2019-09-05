@@ -30,11 +30,10 @@ public class Lemur extends Actor
         }
         //Check If We Hit A Flower
         boolean contactFlower = isTouching(Flower.class);
-        //System.out.println(contactFlower);
         if(contactFlower) {
             Flower plant = (Flower) getOneIntersectingObject(Flower.class);
             int plantScore = plant.getScore();
-            score = plantScore - score;
+            score = score - plantScore;
             removeTouching(Flower.class);
         }
         boolean contactCactus = isTouching(Cactus.class);
@@ -44,12 +43,12 @@ public class Lemur extends Actor
             score = plantScore + score;
             removeTouching(Cactus.class);
         }
-        //Check to see if Lemur wins
-        if(score >= 15) {
+        //Check to see if Lemur or bee wins
+        if(score >= 22) {
             LemurWin winscreen = new LemurWin();
             Greenfoot.setWorld(winscreen);
         }
-        if(score <= -15) {
+        if(score <= -22) {
             BeeWin winscreen = new BeeWin();
             Greenfoot.setWorld(winscreen);
         }
