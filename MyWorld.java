@@ -21,7 +21,7 @@ public class MyWorld extends World
         addObject(bee1, 0, 300); 
         Lemur lemur1 = new Lemur();
         addObject(lemur1, 0, 300);
-        for(int i = 0; i < 8; i++) {
+        for(int i = 0; i < 1; i++) {
             Cactus cactus1 = new PoisonMushroom();
             addObject(cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));
             Cactus cactus2 = new Lemon();
@@ -36,6 +36,13 @@ public class MyWorld extends World
             addObject(flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));          
         }
         if(numberOfObjects()==2) {
+            TieWorld tiescreen = new TieWorld();
+            Greenfoot.setWorld(tiescreen);
+        
+    }
+}
+public void act() {
+if(numberOfObjects()==2) {
             TieWorld tiescreen = new TieWorld();
             Greenfoot.setWorld(tiescreen);
         
