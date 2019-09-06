@@ -36,7 +36,8 @@ public class MyWorld extends World
             addObject(flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(570));          
         }
         if(numberOfObjects()==2) {
-            
+            TieWorld tiescreen = new TieWorld();
+            Greenfoot.setWorld(tiescreen);
         
     }
 }
